@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!--<property name="dialect">org.hibernate.dialect.MySQLDialect</property>-->
+
+        <property name="connection.url">jdbc:mysql://123.207.244.139:3306/db_classroom</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+
+        <property name="connection.username">czb</property>
+        <property name="connection.password">czb</property>
+        <property name="show_sql">false</property>
+        <property name="format_sql">true</property>
+
+
+        <mapping class="com.ning.DAO.ClassroomEntity"/>
+        <mapping class="com.ning.DAO.HireEntity"/>
+        <mapping class="com.ning.DAO.TeacherEntity"/>
+        <mapping class="com.ning.DAO.TimeEntity"/>
+        <mapping class="com.ning.DAO.DayEntity"/>
+        <!-- <property name="connection.username"/> -->
+        <!-- <property name="connection.password"/> -->
+
+        <!-- DB schema will be updated if needed -->
+        <!-- <property name="hbm2ddl.auto">update</property> -->
+    </session-factory>
+</hibernate-configuration>

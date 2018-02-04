@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="CMS_N:war">
+    <output-path>$PROJECT_DIR$/out/artifacts/CMS</output-path>
+    <root id="archive" name="CMS.war">
+      <element id="artifact" artifact-name="CMS_N:war exploded" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.apache.commons:commons-lang3:3.3.1" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

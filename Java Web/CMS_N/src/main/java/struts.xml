@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+	<constant name="struts.devMode" value="true" />
+	<package name="default" namespace="/" extends="struts-default">
+
+
+		<!-- Login -->
+		<action name="login" class="com.ning.controller.Login" method="login">
+			<result name="success">index.jsp</result>
+			<result name="error">login.jsp</result>
+		</action>
+
+		<action name="exit" class="com.ning.controller.Login" method="exit">
+			<result name="success">login.jsp</result>
+		</action>
+
+		<!--  Time -->
+		<action name="freetime" class="com.ning.controller.Time" method="freetime">
+			<result name="success">freetime.jsp</result>
+		</action>
+
+		<action name="hire" class="com.ning.controller.Time" method="hire">
+			<result name="success">freetime.jsp</result>
+			<result name="error">error.html</result>
+		</action>
+
+
+		<!-- ClassroomManage -->
+		<action name="showCInfo" class="com.ning.controller.ClassroomManage" method="showInfo">
+			<result name="success">classroom-info.jsp</result>
+		</action>
+
+		<!-- TeacherManage -->
+		<action name="updateTeacher" class="com.ning.controller.TeacherManage" method="update">
+			<result name="success">user-info.jsp</result>
+		</action>
+	</package>
+</struts>    
