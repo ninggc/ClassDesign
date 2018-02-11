@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <typeAliases>
+    	<package name="progress.info"/>
+    </typeAliases>
+    
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC" />
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver" />
+                <property name="url" value="jdbc:mysql://123.207.244.139:3306/db_progress?useUnicode=true&amp;characterEncoding=UTF-8&amp;useSSL=false&amp;zeroDateTimeBehavior=convertToNull" />
+                <property name="username" value="root" />
+                <property name="password" value="906978985" />
+            </dataSource>
+        </environment>
+    </environments>
+    
+    <mappers>
+    	<mapper resource="progress/mapper/user-mapper.xml"/>
+    </mappers>
+    
+</configuration>

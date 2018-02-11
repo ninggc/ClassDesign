@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+	<constant name="struts.devMode" value="true" />
+	<package name="default" namespace="/" extends="struts-default">
+
+		<!-- User -->
+		<action name="login" class="progress.server.UserServer" method="login"/>
+		<action name="register" class="progress.server.UserServer" method="register"></action>
+		<action name="searchUserByAccount" class="progress.server.UserServer" method="searchByAccount"></action>
+		<action name="searchUserByMark" class="progress.server.UserServer" method="searchByMark"></action>
+		<action name="addUser" class="progress.server.UserServer" method="add"></action>
+
+
+		<!-- Image -->
+		<action name="getImg" class="progress.server.ImgServer" method="upload">
+			<result name="input">/index.jsp</result>
+		</action>
+		
+	</package>
+</struts>    
